@@ -1,20 +1,29 @@
-# Nuxt 3 Minimal Starter
+# MouseDining Frontend
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Standalone web frontend built with the Nuxt framework ([documentation](https://nuxt.com/docs/getting-started/introduction)) that uses the Vue library ([docs](https://vuejs.org/guide/introduction.html)).
 
 ## Setup
 
-Make sure to install the dependencies:
+**Pre-requisites**
+
+```
+npm - any version
+node@18.16.0
+```
+
+**NOTE:** Its important to use the correct version of node during installation, developement and build. If you need different node versions for different applications, it is highly recommended to use [nvm](https://github.com/nvm-sh/nvm) to manage them.
+
+Additionally, code is linted and formatted with ESLint and Prettier. It is strongly encouraged to install those extensions in your editor to take advantage of code formatting on save. Finally, the Volar extension will greatly assist with Vue development.
+
+Clone repo:
 
 ```bash
-# yarn
-yarn install
+$ git clone https://github.com/mousdining/mousedining-web.git
 
-# npm
-npm install
+$ cd mousedining-web
 
-# pnpm
-pnpm install
+// Install packages
+$ npm install
 ```
 
 ## Development Server

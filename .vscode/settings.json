@@ -1,0 +1,15 @@
+{
+  "editor.formatOnSave": true,
+  /**
+   * NOTE: Intentionally disabling editor.formatOnType
+   * because there is a conflict with that setting and prettier.vueIndentScriptAndStyle
+   */
+  "editor.formatOnType": false,
+  "editor.formatOnPaste": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.enable": true,
+  "eslint.validate": ["vue", "html", "javascript", "typescript"]
+}
