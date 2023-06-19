@@ -1,0 +1,46 @@
+.content--menu {
+  padding-top: 0;
+}
+.rest-menu {
+  position: relative;
+  &:not(:first-child) {
+    padding-top: 40px;
+    margin-top: 40px;
+    &::before {
+      @include before;
+      height: 2px;
+      width: 140px;
+      background: $dark-gray;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+  .icon-heart {
+    margin-top: 3px;
+    color: $white;
+    text-shadow: 0 1px 0 $dark-gray, 1px 0 0 $dark-gray, -1px 0 0 $dark-gray,
+      0 -1px $dark-gray;
+    padding-right: 8px;
+    &.favorite {
+      color: $primary;
+      text-shadow: none;
+    }
+  }
+}
+.rest-menu__course {
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  color: $light-gray;
+}
+
+.rest-menu__item {
+  margin-bottom: 20px;
+  font-weight: bold;
+  &__desc {
+    font-weight: normal;
+  }
+  &__price {
+    padding-left: 8px;
+  }
+}

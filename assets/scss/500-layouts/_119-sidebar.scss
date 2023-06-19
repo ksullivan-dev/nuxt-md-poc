@@ -1,0 +1,56 @@
+.sidebar {
+  flex: 1 1 100%;
+  @include large-phone {
+    display: flex;
+    margin: 0 -10px;
+  }
+  @include desktop {
+    flex: 0 1 25.8823529412%;
+    min-width: 220px;
+    max-width: 300px;
+    margin: 0;
+    margin-left: 40px;
+    display: block;
+  }
+}
+.sidebar__container {
+  width: 100%;
+  &:not(:first-child) {
+    margin-top: 40px;
+  }
+  @include large-phone {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    margin: 0 10px;
+    &:not(:first-child) {
+      margin-top: 0;
+    }
+  }
+  @include desktop {
+    max-width: 100%;
+    margin: 0;
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+}
+.sidebar__heading {
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid $dark-gray;
+
+  font-size: 20px;
+  font-weight: bold;
+}
+.sidebar__list {
+  list-style: outside square;
+  padding-left: 20px;
+  a {
+    color: $primary;
+  }
+}
+.sidebar__ad {
+  img {
+    margin: 0 auto;
+  }
+}

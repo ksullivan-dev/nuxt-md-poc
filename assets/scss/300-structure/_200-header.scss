@@ -1,0 +1,16 @@
+.header {
+  position: relative;
+  padding: 20px 0;
+}
+
+.header__logo {
+  width: 120px;
+  margin-right: auto;
+}
+.header__icon {
+  margin-left: 10px;
+  order: 4;
+  @include tablet {
+    margin-left: 20px;
+  }
+}

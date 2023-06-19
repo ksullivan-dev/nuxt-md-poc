@@ -1,0 +1,50 @@
+@mixin button {
+  border-radius: 3px;
+  display: inline-block;
+  padding: 14px 18px;
+  line-height: 1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  color: $white;
+  outline: 0;
+  background: $primary;
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  &:hover {
+    background: darken($primary, 10%);
+    color: $white;
+  }
+  &--disabled,
+  &--disabled:hover {
+    background: $light-gray;
+    cursor: default;
+  }
+  &--positive {
+    background: $positive;
+    &:hover,
+    &:focus {
+      background: darken($positive, 10%);
+    }
+  }
+  &--neutral {
+    background: $dark-gray;
+    color: $white;
+    &:hover,
+    &:focus {
+      background: darken($dark-gray, 10%);
+    }
+  }
+  &--menu,
+  &--reverse {
+    background: transparent;
+    border: 1px solid $primary;
+    padding: 13px 18px;
+    color: $primary;
+    font-weight: normal;
+  }
+}

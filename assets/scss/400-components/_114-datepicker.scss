@@ -1,0 +1,79 @@
+.daterangepicker {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  background: $white;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px transparentize($black, 0.5);
+  box-sizing: border-box;
+  display: flex;
+  z-index: 101;
+  margin-left: -50px;
+}
+.calendar {
+  padding: 10px;
+  flex: 1 0;
+  box-sizing: border-box;
+  table {
+    width: 100%;
+  }
+  thead {
+    tr:first-child {
+      th {
+        padding-bottom: 10px;
+        i {
+          display: none;
+        }
+        &.available {
+          @extend .icon;
+          font-size: 20px;
+          position: relative;
+          top: 3px;
+          &.next {
+            &::before {
+              content: "\1f329";
+            }
+          }
+          &.prev {
+            &::before {
+              content: "\e903";
+            }
+          }
+        }
+      }
+    }
+    tr:nth-child(2) {
+      th {
+        color: $dark-gray;
+        padding-bottom: 5px;
+      }
+    }
+  }
+  td {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    z-index: 1;
+    &.off {
+      background: $off-white;
+      color: $light-gray;
+      cursor: default;
+      z-index: 10;
+    }
+
+    // Hover state
+    &.available:not(.disabled):hover,
+    &.start-date {
+      color: $white;
+      cursor: pointer;
+      border-radius: 50%;
+      background: $primary;
+    }
+  }
+}
+
+.daterangepicker_input {
+  display: none;
+}

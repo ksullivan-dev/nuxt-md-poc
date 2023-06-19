@@ -1,0 +1,38 @@
+.split-page {
+  padding: 0;
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column;
+}
+.section__header {
+  border-top: 1px solid darken($off-white, 5%);
+  border-bottom: 1px solid darken($off-white, 5%);
+  flex: 0 0 auto;
+  .no-top-border & {
+    border-top: 0;
+  }
+  .section__title {
+    margin: 20px 0;
+  }
+}
+.section__main {
+  padding: 20px 0;
+  background: $off-white;
+  border-bottom: 1px solid darken($off-white, 5%);
+  flex: 1 0 auto;
+}
+.section__under-content {
+  padding: 20px 0 0;
+  .section__title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+.section__additional-content {
+  padding: 20px 0;
+  background: $off-white;
+  .section__title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}

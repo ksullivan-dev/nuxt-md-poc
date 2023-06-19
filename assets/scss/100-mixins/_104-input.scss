@@ -1,0 +1,17 @@
+@mixin input {
+  box-shadow: none;
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  display: block;
+  margin: 0;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 0;
+  line-height: inherit;
+  font-size: inherit;
+  color: inherit;
+  &:focus {
+    outline: none;
+  }
+}

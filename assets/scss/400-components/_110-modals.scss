@@ -1,0 +1,223 @@
+.modal--active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  min-width: 320px;
+  background: transparentize($black, 0.5);
+}
+.modal__inner {
+  width: 100%;
+  max-width: 660px;
+  background: $white;
+  box-sizing: border-box;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  max-height: 100%;
+  overflow: auto;
+  min-height: 200px;
+  @include large-phone {
+    top: 20px;
+    max-height: calc(100% - 80px);
+  }
+  @include tablet {
+    top: 40px;
+    max-height: calc(100% - 100px);
+  }
+  .section__title {
+    text-align: center;
+  }
+}
+.modal__logo {
+  height: 36px;
+  padding: 15px;
+  border-bottom: 1px solid $light-gray;
+  img {
+    display: block;
+    max-height: 100%;
+  }
+  @include large-phone {
+    display: none;
+  }
+}
+
+.modal__close {
+  text-indent: 200%;
+  overflow: hidden;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  height: 36px;
+  width: 36px;
+  .icon--clear {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    &::before,
+    &::after {
+      width: 2px;
+    }
+  }
+  @include large-phone {
+    height: 20px;
+    width: 20px;
+    top: 10px;
+    right: 10px;
+  }
+}
+.modal__header {
+  font-weight: 400;
+}
+
+.modal--padded {
+  padding: 15px;
+  @include large-phone {
+    padding: 30px;
+  }
+  .btn {
+    border-radius: 2px;
+    width: 100%;
+    @include large-phone {
+      width: auto;
+    }
+  }
+}
+.modal--full-btn {
+  padding: 15px 15px 0;
+  .btn-container {
+    margin: 15px -15px 0;
+    .btn {
+      border-radius: 0;
+      width: 100%;
+    }
+  }
+  @include large-phone {
+    padding: 30px 30px 0;
+    .btn-container {
+      margin: 30px -30px 0;
+    }
+  }
+}
+
+.modal__helper-text {
+  padding: 15px 0;
+  &:last-child {
+    padding-bottom: 0;
+  }
+  &--last {
+    border-top: 1px solid $light-gray;
+  }
+}
+
+.modal button:not(.btn, .styled-link),
+.modal a:not(.btn, .styled-link) {
+  font-weight: bold;
+  color: $primary;
+  &:hover {
+    color: lighten($primary, 10%);
+  }
+}
+.modal__alert.active {
+  margin-top: 20px;
+  text-align: left;
+}
+
+// Contact Address
+.contact__address {
+  background: $off-white;
+  margin: 0 -15px;
+  padding: 15px;
+  padding-left: 95px;
+  position: relative;
+  line-height: 1.5;
+  .icon-email {
+    color: $light-gray;
+    font-size: 72px;
+    position: absolute;
+    left: 15px;
+    top: 2px;
+  }
+  @include large-phone {
+    margin: 0 -30px;
+  }
+}
+
+// Forgot modal
+.form__forgot {
+  .input--labelize {
+    padding: 12px 0;
+  }
+  .input__wrapper--labelize {
+    margin: 4px 0;
+  }
+  .label--labelize.labelize,
+  .input--labelize:focus ~ .label--labelize {
+    bottom: calc(100% - 18px);
+  }
+  .btn {
+    margin-left: 15px;
+  }
+  a {
+    margin: 0 10px;
+  }
+}
+
+// Register modal
+.form__register {
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+    flex: 1 1 100%;
+  }
+  .input__wrapper--labelize {
+    margin: 0 0 20px;
+  }
+  .wrapper--half {
+    flex: 0 1 calc(50% - 10px);
+    & + .wrapper--half {
+      margin-left: 20px;
+    }
+  }
+  > .input__label {
+    margin-bottom: 4px;
+  }
+  .wrapper--text {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-end;
+    .input__wrapper {
+      flex: 0 0 140px;
+      margin-bottom: 0;
+      .input--select {
+        padding-right: 30px;
+      }
+    }
+    .label--labelize.labelize,
+    .input--labelize:focus ~ .label--labelize {
+      margin: 0;
+    }
+    .input__wrapper:last-child {
+      margin-left: 20px;
+      flex: 1 1 100%;
+    }
+  }
+}
+
+// Report ticket priing error
+.form__contact--report-pricing-error {
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+    flex: 1 1 100%;
+  }
+  .wrapper--half {
+    flex: 0 1 calc(50% - 10px);
+    &:nth-child(even) {
+      margin-left: 20px;
+    }
+  }
+}

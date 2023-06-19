@@ -1,0 +1,31 @@
+.home {
+  .blog__container {
+    @include tablet {
+      justify-content: space-between;
+    }
+  }
+  .blog-item {
+    &:nth-child(4) {
+      @include desktop {
+        display: none;
+      }
+      @include desktop-plus {
+        display: block;
+      }
+    }
+    @include desktop-plus {
+      flex-basis: calc(25% - 20px);
+    }
+  }
+  .blog-item__image {
+    width: 100%;
+    padding-top: 58.333%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .blog-item__title {
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+}

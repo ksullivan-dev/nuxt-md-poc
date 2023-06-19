@@ -1,0 +1,178 @@
+.content--tickets {
+  padding-bottom: 0;
+  .section__main {
+    padding: 40px 0;
+  }
+}
+.filter-intro {
+  margin: 0 0 20px;
+  @include large-phone {
+    margin: 0 0 40px;
+  }
+}
+.ticket__filters {
+  .select__container {
+    margin-bottom: 20px;
+  }
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  .input__wrapper--select {
+    background: $white;
+  }
+  @include large-phone {
+    margin: 0 -5px;
+    display: flex;
+    .select__container {
+      max-width: 280px;
+      flex: 1 0 calc(33.333% - 10px);
+      margin: 0 5px;
+    }
+  }
+}
+.ticket-intro {
+  margin: 20px 0;
+}
+.ticket__types {
+  @include large-phone {
+    display: flex;
+    margin: 0 -5px;
+  }
+}
+.ticket-btn {
+  @extend .card;
+  display: block;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  min-height: 120px;
+  &.toggle--active {
+    background: $white;
+    border: 2px solid $dark-gray;
+  }
+  @include large-phone {
+    margin: 0 5px;
+    max-width: 280px;
+    flex: 1 0 calc(33.333% - 10px);
+  }
+}
+.ticket-name {
+  display: block;
+  margin-bottom: 10px;
+}
+.ticket-desc {
+  font-weight: bold;
+}
+
+.ticket-saveBanner {
+  padding: 0 0 40px;
+}
+
+.ticket-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0 0;
+  border: 1px solid $dark-gray;
+  background: darken($white, 10%);
+  padding: 0 20px;
+  @include large-phone {
+    padding: 20px;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &.isDeal {
+    background: $white;
+  }
+}
+.ticket__item {
+  box-sizing: border-box;
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex: 1 0 100%;
+  border: 0 solid $light-gray;
+  border-top-width: 1px;
+  position: relative;
+  &:first-child {
+    border-width: 0;
+  }
+  @include large-phone {
+    flex: 1 0 calc(50% - 20px);
+    border-top-width: 0;
+    &:nth-child(even) {
+      margin-left: 20px;
+      &::before {
+        @include before;
+        height: 100%;
+        width: 1px;
+        background: $light-gray;
+        top: 0;
+        left: -10px;
+      }
+    }
+
+    &:nth-child(n + 3) {
+      margin-top: 20px;
+      &::after {
+        @include before;
+        width: 100%;
+        height: 1px;
+        background: $light-gray;
+        top: -10px;
+        left: 0;
+      }
+    }
+  }
+  @include desktop-plus {
+    flex: 1 0 25%;
+    &:nth-child(n + 2) {
+      order: 1;
+      border-left-width: 1px;
+      margin: 0;
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .isDeal {
+    font-style: italic;
+    font-weight: bold;
+  }
+  &--inner {
+    flex: 1 1 auto;
+  }
+}
+.ticket__price {
+  font-size: 48px;
+  color: $negative;
+  font-weight: bold;
+  letter-spacing: -0.68px;
+  margin-bottom: 16px;
+  &::first-letter {
+    font-size: 18px;
+    vertical-align: super;
+  }
+  .isDeal & {
+    color: $positive;
+  }
+}
+.ticket__qty {
+  font-size: 24px;
+  margin-top: 16px;
+}
+.ticket-logo {
+  border-radius: 3px;
+  background: $white;
+  padding: 10px;
+  margin: 20px 10px;
+  box-shadow: 0 0 4px $light-gray;
+  display: inline-block;
+}
+
+.ticket__error {
+  margin-top: 20px;
+}

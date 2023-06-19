@@ -1,0 +1,114 @@
+.home__feature {
+  padding-top: 0;
+  position: relative;
+  &::before {
+    @include before;
+    left: 0;
+    width: 100%;
+    background: $off-white;
+    top: 160px;
+    height: calc(100% - 160px);
+    @include desktop {
+      top: 200px;
+      height: calc(100% - 200px);
+    }
+  }
+  .width-wrapper {
+    position: relative;
+  }
+}
+
+.feature--search {
+  margin: 0 -20px 40px;
+  background: $white;
+  padding: 20px;
+  @include medium-phone {
+    margin: 0 0 40px;
+    padding: 30px;
+  }
+  @include desktop {
+    margin: 0;
+    max-width: 660px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 4;
+    padding: 40px;
+  }
+  .search-container {
+    margin: 0;
+  }
+  .styled-link {
+    white-space: nowrap;
+    color: $primary;
+    font-weight: bold;
+    display: inline-block;
+  }
+}
+.search__container {
+  margin: 20px 0;
+  .input__wrapper--with-icon {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid $light-gray;
+    border-right: 0;
+    border-radius: 3px 0 0 3px;
+    @include large-phone {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}
+// Search button
+.btn--inline {
+  border-radius: 0 3px 3px 0;
+  padding: 16px 18px;
+  @include tablet {
+    padding: 23px 18px;
+  }
+}
+
+.feature--slider {
+  display: none;
+  @include desktop {
+    display: block;
+    margin-bottom: 60px;
+    margin-left: auto;
+    height: 500px;
+    max-width: 750px;
+    width: 100%;
+    // TODO Remove this when the slider is fixed
+    img {
+      display: block;
+      margin-left: auto;
+    }
+  }
+}
+// Featured Restaurants
+.featured-restaurants-container {
+  @include tablet {
+    justify-content: space-between;
+  }
+}
+.featured__item:nth-child(3) {
+  @include large-phone {
+    display: none;
+  }
+  @include desktop {
+    display: block;
+  }
+}
+.featured__content {
+  padding: 16px 20px;
+}
+.featured__title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.featured__details {
+  //TODO revisit this.
+  display: none;
+  strong {
+    font-style: italic;
+  }
+}

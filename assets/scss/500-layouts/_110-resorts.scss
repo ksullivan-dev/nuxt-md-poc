@@ -1,0 +1,11 @@
+.resort__text {
+  position: relative;
+  padding-right: 40px;
+  text-transform: uppercase;
+  .icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -50%);
+  }
+}

@@ -1,0 +1,145 @@
+.modal--watch {
+  text-align: center;
+  .btn-container {
+    margin: 20px 0 0;
+    text-align: center;
+  }
+}
+.watch__options {
+  padding: 15px;
+  margin: 0 -15px;
+  border-top: 1px solid $light-gray;
+  position: relative;
+  .input--select {
+    width: 130px;
+  }
+  i {
+    margin-right: 10px;
+  }
+  label {
+    text-align: left;
+  }
+  select {
+    padding-right: 30px;
+    border: 1px solid $light-gray;
+  }
+  @include large-phone {
+    margin: 0 -30px;
+    padding: 20px 30px;
+  }
+}
+
+.option--size,
+.option--time,
+.option--meal {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.option--time,
+.option--meal {
+  margin-top: 12px;
+}
+
+.change-day {
+  margin-top: 10px;
+}
+.link--prev,
+.link--next {
+  font-size: 18px;
+  color: $darker-gray;
+  letter-spacing: 0.25px;
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+  &::before,
+  &::after {
+    @include before;
+    position: absolute;
+    height: 12px;
+    width: 1px;
+    background: $darker-gray;
+    top: 25%;
+    left: 0;
+    transform: translate(0, -50%) rotate(135deg);
+    transform-origin: bottom center;
+  }
+  &::after {
+    transform: translate(0, -50%) rotate(45deg);
+  }
+  &:hover {
+    color: $primary;
+    &::before,
+    &::after {
+      background: $primary;
+    }
+  }
+}
+.link--next {
+  padding-left: 0;
+  padding-right: 20px;
+  &::before,
+  &::after {
+    left: auto;
+    right: 0;
+    transform: translate(0, -50%) rotate(-135deg);
+  }
+  &::after {
+    transform: translate(0, -50%) rotate(-45deg);
+  }
+}
+.link--disabled {
+  color: $light-gray;
+  cursor: default;
+  &::before,
+  &::after {
+    background: $light-gray;
+  }
+  &:hover {
+    color: $light-gray;
+    &::before,
+    &::after {
+      background: $light-gray;
+    }
+  }
+}
+
+.upgrade {
+  display: block;
+  margin-top: 10px;
+}
+.watch__links {
+  a {
+    margin: 10px 20px;
+  }
+}
+
+.reservation-links {
+  margin: 10px 0;
+}
+.reservation-link {
+  margin: 5px 20px;
+}
+
+// Confirm modal
+.confirmed-details {
+  i {
+    margin-right: 4px;
+  }
+  p {
+    padding: 10px 20px;
+    padding-right: 0;
+    border-left: 1px solid $light-gray;
+    box-sizing: border-box;
+    &:first-child {
+      padding-left: 0;
+      padding-right: 20px;
+      border: 0;
+    }
+  }
+}
+
+// Openings modal
+.modal--openings {
+  text-align: center;
+}

@@ -1,0 +1,68 @@
+.home__parks {
+  background: $off-white;
+}
+.prefooter__content {
+  border-bottom: 1px solid $light-gray;
+  padding-bottom: 48px;
+  flex-wrap: wrap;
+  @include tablet {
+    flex-wrap: nowrap;
+  }
+}
+.prefooter__title {
+  box-sizing: border-box;
+  padding-right: 20px;
+  text-align: center;
+  flex: 1 1 100%;
+  margin-bottom: 20px;
+  @include tablet {
+    text-align: left;
+    flex: 1 1 50%;
+    margin-bottom: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.footer {
+  padding-bottom: 20px;
+  @include large-phone {
+    padding-bottom: 48px;
+  }
+}
+.footer__top {
+  margin-bottom: 26px;
+  justify-content: center;
+  @include tablet {
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+.footer__logo {
+  margin-bottom: 20px;
+  @include tablet {
+    margin-bottom: 0;
+    margin-right: auto;
+  }
+}
+.footer__bottom {
+  display: block;
+  text-align: center;
+  @include large-phone {
+    display: flex;
+    text-align: left;
+  }
+}
+.footer__last {
+  margin-top: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include large-phone {
+    padding-bottom: 0;
+  }
+}
+.footer__disclaimer {
+  text-align: center;
+  @include large-phone {
+    text-align: right;
+  }
+}

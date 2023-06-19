@@ -1,0 +1,64 @@
+// Ad Units
+
+.home__ad-unit {
+  padding-top: 0;
+  .img-container {
+    img {
+      margin: 0 auto;
+    }
+  }
+}
+
+#preFooter {
+  background: $off-white;
+  margin-top: -2px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.adUnitContainer {
+  margin: 18px 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  #adDismiss {
+    position: fixed;
+    right: 0;
+    bottom: 51px;
+    background: rgba(0, 0, 0, 0.3);
+    line-height: 1;
+    font-size: 12px;
+  }
+  #adDismiss button {
+    background: transparent;
+    color: white;
+    min-width: 10px;
+    font-size: 12px;
+    line-height: 1;
+    padding: 3px 5px 1px;
+    border: none;
+  }
+  #fixedFooter {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    text-align: center;
+    z-index: 99;
+    border-top: 1px solid #444444;
+  }
+  #footer {
+    padding-bottom: 51px;
+  }
+}
+@media screen and (min-width: 480px) {
+  #adDismiss,
+  #adDismiss button,
+  #fixedFooter {
+    display: none;
+  }
+  #footer {
+    padding-bottom: 0;
+  }
+}

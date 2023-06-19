@@ -1,0 +1,58 @@
+.home__spotlight {
+  background: $darker-gray;
+}
+.spotlight {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include desktop {
+    flex-wrap: nowrap;
+  }
+  @include desktop-plus {
+    align-items: center;
+  }
+}
+.spotlight__image,
+.spotlight__text {
+  flex: 1 1 100%;
+  @include desktop {
+    flex: 0 1 calc(50% - 20px);
+  }
+}
+.spotlight__image {
+  margin-bottom: 20px;
+  @include desktop {
+    margin-bottom: 0;
+  }
+  a {
+    display: block;
+    height: 100%;
+    padding-top: 46.9696969697%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    @include desktop {
+      padding-top: 60.8695652174%;
+    }
+  }
+}
+.spotlight__heading {
+  margin-bottom: 10px;
+  @include large-phone {
+    margin-bottom: 20px;
+  }
+}
+.spotlight__title {
+  margin-bottom: 18px;
+}
+.spotlight__details {
+  margin-bottom: 20px;
+}
+.spotlight__btn {
+  margin-top: auto;
+  text-align: center;
+  @include tablet {
+    text-align: left;
+  }
+}

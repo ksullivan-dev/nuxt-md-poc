@@ -1,0 +1,253 @@
+.content--restaurant {
+  .section__main {
+    .width-wrapper {
+      // max-width: 800px;
+    }
+  }
+}
+
+// Overview styles - Restaurant Name, Cuisine and Price
+.restaurant__overview {
+  padding: 0 0 20px;
+  text-align: center;
+  .section__title {
+    margin-bottom: 12px;
+    text-align: center;
+  }
+}
+.overview__basic {
+  text-align: center;
+  box-sizing: border-box;
+  flex: 1 1 100%;
+  @include large-phone {
+    padding-right: 20px;
+    flex-basis: 40%;
+  }
+}
+.overview__description {
+  text-align: center;
+  box-sizing: border-box;
+  flex: 1 1 100%;
+  @include large-phone {
+    text-align: left;
+    padding-left: 20px;
+    flex-basis: 60%;
+  }
+}
+
+// Hours container - Hours and Menu button
+.restaurant__hours {
+  text-align: center;
+  .hours {
+    margin-bottom: 6px;
+  }
+}
+.hours__container {
+  box-sizing: border-box;
+  align-self: center;
+  flex-basis: 100%;
+  &:first-child {
+    margin-bottom: 20px;
+  }
+  @include large-phone {
+    padding: 0 20px;
+    flex-basis: 50%;
+    &:first-child {
+      margin: 0;
+    }
+  }
+}
+.hours__title {
+  margin-bottom: 4px;
+}
+
+// Details - Rating and Favorite
+.restaurant__details {
+  border-top: 1px solid darken($off-white, 5%);
+  background: $white;
+  &::before {
+    top: -1px !important;
+  }
+}
+.details__rating,
+.details__favorite {
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+.details__rating {
+  .rating__init {
+    display: inline-block;
+  }
+}
+.details__favorite {
+  border-left: 1px solid darken($off-white, 5%);
+}
+.favoriteBtn {
+  text-transform: uppercase;
+  .icon-heart {
+    color: $white;
+    text-shadow: 0 1px 0 $dark-gray, 1px 0 0 $dark-gray, -1px 0 0 $dark-gray,
+      0 -1px $dark-gray;
+    padding-right: 8px;
+    &.favorite {
+      color: $primary;
+      text-shadow: none;
+    }
+  }
+}
+
+// restaurantCalendar
+.restaurant__calendar {
+  display: flex;
+  flex-flow: wrap;
+  margin: 20px -20px 0;
+  overflow: hidden;
+
+  @include tablet {
+    background: $light-gray;
+    box-shadow: 0 2px 8px transparentize($black, 0.8);
+    margin-left: -30px;
+    margin-right: -30px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 1px;
+  }
+  @include desktop {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.month,
+.calendar__size {
+  flex: 1 1 100%;
+  grid-column-start: span 7;
+  background: $white;
+  border-top: 1px solid $light-gray;
+  text-align: center;
+  padding: 10px;
+  @include tablet {
+    border: none;
+  }
+  .size__container {
+    max-width: 300px;
+    margin: 0 auto;
+    font-size: 18px;
+    i {
+      margin-right: 4px;
+    }
+    .input__wrapper--select {
+      border: 1px solid $light-gray;
+      margin-left: 4px;
+    }
+    select {
+      padding-right: 38px;
+    }
+  }
+}
+.month {
+  border-bottom: 1px solid $light-gray;
+  @include tablet {
+    border: none;
+  }
+}
+
+.meal-slot {
+  box-sizing: border-box;
+  padding: 10px;
+  background: $white;
+  display: flex;
+  flex-flow: column;
+  margin: 10px;
+  box-shadow: 0 2px 8px transparentize($black, 0.8);
+  flex: 1 1 100%;
+  @include medium-phone {
+    flex: 1 1 calc(50% - 20px);
+  }
+  @include large-phone {
+    flex: 1 1 calc(33.333% - 20px);
+  }
+  @include tablet {
+    margin: 0;
+  }
+  &.out-of-month {
+    display: none;
+    @include tablet {
+      background: $off-white;
+      opacity: 0.7;
+      display: flex;
+    }
+  }
+  &.dayname {
+    display: none;
+    @include tablet {
+      display: flex;
+    }
+  }
+  &.Monday {
+    grid-column-start: 2;
+  }
+  &.Tuesday {
+    grid-column-start: 3;
+  }
+  &.Wednesday {
+    grid-column-start: 4;
+  }
+  &.Thursday {
+    grid-column-start: 5;
+  }
+  &.Friday {
+    grid-column-start: 6;
+  }
+  &.Saturday {
+    grid-column-start: 7;
+  }
+  .btn-container {
+    margin-top: auto;
+  }
+  .btn {
+    font-weight: 400;
+    text-transform: none;
+    margin: 10px 0;
+    padding: 6px 10px;
+    letter-spacing: 0.3px;
+    flex: 1 1 auto;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .notAvailable {
+    text-decoration: line-through;
+    color: $light-gray;
+  }
+}
+.dayOfMonth {
+  text-align: right;
+}
+.change-month {
+  color: $primary;
+  &.disabled {
+    cursor: default;
+    color: $light-gray;
+  }
+}
+.month-name {
+  display: inline-block;
+  width: 150px;
+  font-weight: bold;
+}
+.meal-time-desc {
+  display: inline;
+  @include tablet {
+    display: none;
+  }
+}
+
+.calendar-closed {
+  margin: auto;
+  text-align: center;
+}

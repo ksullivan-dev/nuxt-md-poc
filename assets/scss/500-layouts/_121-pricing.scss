@@ -1,0 +1,180 @@
+.content--pricing {
+  text-align: center;
+  .section__main {
+    .width-wrapper {
+      font-size: 16px;
+    }
+  }
+}
+.pricing__current {
+  padding: 17px 0;
+  background: $darker-gray;
+  color: $white;
+  text-align: center;
+  .btn {
+    margin: 6px;
+    margin-right: 0;
+  }
+}
+
+.plan-toggle {
+  justify-content: center;
+  margin: 40px 0 20px;
+  .btn {
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    font-weight: normal;
+    flex: 1 1 50%;
+    @include large-phone {
+      font-size: 16px;
+    }
+    @include tablet {
+      flex: 0 1 auto;
+    }
+  }
+}
+
+.plan__options {
+  margin: 0 -20px;
+  flex-wrap: wrap;
+  @include tablet {
+    flex-wrap: nowrap;
+    margin: 0 -5px;
+  }
+}
+.plan__option {
+  margin: 5px;
+  background: $white;
+  box-sizing: border-box;
+  padding: 40px 20px 20px;
+  flex: 1 1 calc(50% - 20px);
+  display: flex;
+  flex-flow: column;
+  @include tablet {
+    flex: 1 1 calc(25% - 10px);
+  }
+  .btn {
+    text-transform: none;
+    letter-spacing: -0.3px;
+    font-size: 18px;
+    padding: 14px 12px;
+    width: 100%;
+  }
+  &.current {
+    position: relative;
+    &:before {
+      @include before;
+      content: "Current Plan";
+      color: $white;
+      font-weight: bold;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background: $dark-gray;
+      box-sizing: border-box;
+      z-index: 2;
+    }
+    &:after {
+      @include before;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: transparentize($off-white, 0.5);
+      z-index: 1;
+    }
+  }
+}
+.plan__details {
+  margin-bottom: 10px;
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 auto;
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.plan__name {
+  text-transform: uppercase;
+}
+.plan__cost {
+  font-size: 46px;
+  line-height: 1;
+  margin: 20px 0 6px;
+  margin-top: auto;
+  display: block;
+  &::before {
+    content: "$";
+    position: relative;
+    font-size: 18px;
+    vertical-align: top;
+    top: 6px;
+  }
+}
+.plan__frequency {
+  color: $light-gray;
+}
+.plan__savings {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 0 20px;
+  color: $primary;
+  font-size: 14px;
+}
+.plan__lower-container {
+  margin-top: auto;
+  height: 120px;
+}
+.plan__alerts {
+  border-top: 2px solid $light-gray;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.plan__special {
+  padding: 20px;
+  margin: 20px 0;
+  background: $white;
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+.plan__features {
+  padding-bottom: 20px;
+  border-bottom: 1px solid $light-gray;
+  @include tablet {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 40px;
+    grid-auto-flow: column;
+  }
+  @include desktop {
+    grid-gap: 0 60px;
+  }
+}
+.plan__feature {
+  border: 1px solid $light-gray;
+  padding: 30px 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  text-align: left;
+  .icon {
+    font-size: 60px;
+  }
+}
+
+.plan__feature--text {
+  margin-left: 24px;
+}
+.feature__title {
+  font-size: 18px;
+  letter-spacing: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}

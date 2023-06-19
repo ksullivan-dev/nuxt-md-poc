@@ -1,0 +1,44 @@
+.animated-logo {
+  max-width: 200px;
+  margin: auto;
+  display: block;
+  width: 50%;
+  .btn .loading--icon & {
+    width: auto;
+    height: 32px;
+  }
+}
+
+.logo-m {
+  fill: none;
+  stroke: white;
+  stroke-width: 22;
+  stroke-linecap: round;
+  clip-path: url(#md-logo);
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: draw 0.6s linear infinite;
+}
+.logo-circle {
+  fill: $primary;
+}
+.btn {
+  .loading--icon {
+    .logo-m {
+      stroke: $primary;
+    }
+    .logo-circle {
+      fill: $white;
+    }
+  }
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 800;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
